@@ -1,0 +1,113 @@
+---
+// src/components/Footer.astro
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="footer">
+    <div class="footer-container">
+        <ul class="social-links">
+            <li>
+                <a
+                    href="https://www.instagram.com/gabeharmonstudio/"
+                    target="_blank"
+                    ><img
+                        class="social-icon"
+                        src="public/instagram.svg"
+                        alt="Link"
+                    /></a>
+            </li>
+            <li>
+                <a
+                    href="https://bsky.app/profile/gabeharmonstudio.com"
+                    target="_blank"
+                    ><img
+                        class="social-icon"
+                        src="public/bluesky.svg"
+                        alt="Link"
+                    /></a>
+            </li>
+            <li>
+                <a
+                    href="https://www.tiktok.com/@gabeharmonstudio"
+                    target="_blank"
+                    ><img
+                        class="social-icon"
+                        src="public/tiktok.svg"
+                        alt="Link"
+                    /></a>
+            </li>
+            <li>
+                <a href="https://github.com/gabrielharmon" target="_blank"
+                    ><img
+                        class="social-icon"
+                        src="public/github.svg"
+                        alt="Link"
+                    /></a>
+            </li>
+            <li>
+                <a href="https://sketchfab.com/gabeharmonstudio" target="_blank"
+                    ><img
+                        class="social-icon"
+                        src="public/sketchfab.svg"
+                        alt="Link"
+                    /></a>
+            </li>
+        </ul>
+        <div class="copyright">
+            <p>&copy; {currentYear} Gabriel L. Harmon</p>
+        </div>
+    </div>
+</footer>
+
+<style>
+    .footer {
+        background-color: black;
+        color: white;
+        padding: 0.5rem 1rem;
+        font-family: "Archivo", system-ui, sans-serif;
+    }
+
+    .footer-container {
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .copyright p {
+        margin: 0;
+        font-size: 0.9rem;
+    }
+
+    .social-icon {
+        width: 30px;
+    }
+
+    .social-links {
+        display: flex;
+        list-style: none;
+        gap: 1.5rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    .social-links a {
+        color: #e0e0e0;
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: color 0.2s ease;
+    }
+
+    .social-links a:hover {
+        color: #ffffff;
+        text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+        .footer-container {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+</style>
